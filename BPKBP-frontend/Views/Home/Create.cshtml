@@ -1,0 +1,74 @@
+﻿@model BPKBP_frontend.ViewModels.CreateViewModel
+@{
+    ViewData["Title"] = "Create BPKB Page";
+}
+
+<form class="row g-3" method="post" asp-controller="home" asp-action="Create">
+    <div class="col-md-6">
+        <label asp-for="bpkb.AgreementNumber" class="form-label"></label>
+        <input asp-for="bpkb.AgreementNumber" class="form-control" placeholder="Input Agreement Number" />
+        <span asp-validation-for="@Model.bpkb.AgreementNumber" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="bpkb.FakturDate" for="tanggal_faktur" class="form-label">Tanggal Faktur</label>
+        <div class="date datepicker" style="padding:0px;">
+            <input type="text" class="form-control" id="tanggal_faktur" placeholder="mm/dd/yyyy" asp-for="bpkb.FakturDate">
+            <div class="input-group-addon">
+            </div>
+        </div>
+        <span asp-validation-for="bpkb.FakturDate" class="text-danger"></span>
+    </div>
+    <div class="col-6">
+        <label asp-for="bpkb.BranchID" for="branchID" class="form-label">Branch ID</label>
+        <input type="text" class="form-control" id="branchID" placeholder="Input Branch ID" asp-for="bpkb.BranchID">
+        <span asp-validation-for="bpkb.BranchID" class="text-danger"></span>
+    </div>
+    <div class="col-6">
+        <label asp-for="bpkb.PoliceNo" for="nomor_polisi" class="form-label">Nomor Polisi</label>
+        <input type="text" class="form-control" id="nomor_polisi" placeholder="Input Nomor Polisi" asp-for="bpkb.PoliceNo">
+        <span asp-validation-for="bpkb.PoliceNo" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="bpkb.BPKBNo" for="no_bpkb" class="form-label">No. BPKB</label>
+        <input type="text" class="form-control" id="no_bpkb" placeholder="Input Nomor BPKB" asp-for="bpkb.BPKBNo">
+        <span asp-validation-for="bpkb.BPKBNo" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="bpkb.LocationFK" for="lokasi_penyimpanan" class="form-label">Lokasi Penyimpanan</label>
+        <select id="lokasi_penyimpanan" class="form-select" asp-for="bpkb.LocationFK">
+            <option value="" selected>Select Lokasi Penyimpanan</option>
+            @foreach (var obj in Model.locations)
+            {
+                <option value="@obj.LocationID">@obj.LocationName</option>
+            }
+        </select>
+        <span asp-validation-for="bpkb.LocationFK" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="bpkb.BPKBDateIn" for="tanggal_bpkb_in" class="form-label">Tanggal BPKB In</label>
+        <div class="date datepicker" style="padding:0px;">
+            <input type="text" class="form-control" placeholder="mm/dd/yyyy" asp-for="bpkb.BPKBDateIn">
+            <div class="input-group-addon">
+            </div>
+        </div>
+        <span asp-validation-for="bpkb.BPKBDateIn" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="bpkb.BPKBDate" for="tanggal_bpkb" class="form-label">Tanggal BPKB</label>
+        <div class="date datepicker" style="padding:0px;">
+            <input type="text" class="form-control" placeholder="mm/dd/yyyy" asp-for="bpkb.BPKBDate">
+            <div class="input-group-addon">
+            </div>
+        </div>
+        <span asp-validation-for="bpkb.BPKBDate" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="bpkb.FakturNo" for="no_faktur" class="form-label">No. Faktur</label>
+        <input type="text" class="form-control" id="no_faktur" placeholder="Input Nomor Faktur" asp-for="bpkb.FakturNo">
+        <span asp-validation-for="bpkb.FakturNo" class="text-danger"></span>
+    </div>
+    <div class="col-md-12">
+        <button type="submit" class="btn btn-success" style="width:49%;float:left;">Save</button>
+        <a asp-controller="home" asp-action="index" class="btn btn-danger" style="width:49%;float:right;">Cancel</a>
+    </div>
+</form>

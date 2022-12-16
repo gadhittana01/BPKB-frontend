@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{52CCE8E0-A351-453F-854F-FE1E24C39611}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.BPKBP-frontend PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BPKBP-frontend/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="BPKBP-frontend/Views/Home/Create.cshtml" Line="68" Column="62" />
+      <File FileName="BPKBP-frontend/Views/Shared/_Layout.cshtml" Line="43" Column="14" />
+      <File FileName="BPKBP-frontend/Models/Location.cs" Line="6" Column="2" />
+      <File FileName="BPKBP-frontend/Controllers/HomeController.cs" Line="92" Column="1" />
+      <File FileName="BPKBP-frontend/Views/Home/Index.cshtml" Line="8" Column="97" />
+      <File FileName="BPKBP-frontend/Views/Shared/_ValidationScriptsPartial.cshtml" Line="2" Column="53" />
+      <File FileName="BPKBP-frontend/ViewModels/CreateViewModel.cs" Line="11" Column="2" />
+      <File FileName="BPKBP-frontend/Models/BPKB.cs" Line="44" Column="30" />
+      <File FileName="BPKBP-frontend/Models/ErrorViewModel.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BPKBP-frontend" expanded="True">
+            <Node name="BPKBP-frontend" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

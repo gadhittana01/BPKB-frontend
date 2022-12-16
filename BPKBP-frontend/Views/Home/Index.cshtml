@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BPKB>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div style="float:right;margin-bottom:20px;">
+        <a class="btn btn-primary" asp-controller="home" asp-action="BPKBIndex">Add new BPKB</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Agreement Number</th>
+                <th scope="col">Branch ID</th>
+                <th scope="col">No. BPKB</th>
+                <th scope="col">Tanggal BPKB In</th>
+                <th scope="col">Tanggal BPKB</th>
+                <th scope="col">NO. Faktur</th>
+                <th scope="col">Tanggal Faktur</th>
+                <th scope="col">Nomor Polisi</th>
+                <th scope="col">Lokasi Penyimpanan</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model)
+            {
+                <tr>
+                    <th>@obj.AgreementNumber</th>
+                    <td>@obj.BranchID</td>
+                    <td>@obj.BPKBNo</td>
+                    <td>@obj.BPKBDateIn</td>
+                    <td>@obj.BPKBDate</td>
+                    <td>@obj.FakturNo</td>
+                    <td>@obj.FakturDate</td>
+                    <td>@obj.PoliceNo</td>
+                    <td>@obj.LocationFK</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
